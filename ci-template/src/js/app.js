@@ -1,6 +1,13 @@
 // TODO: write your code here
-import sum from './basic';
 
-console.log('worked');
-
-console.log(sum([1, 2]));
+export default function characterStatus(character) {
+	let status = '';
+	if (character.health > 50) {
+	  status = 'healthy';
+	} else if (character.health > 14 && character.health < 51) {
+	  status = 'wounded';
+	} else if (character.health < 15) {
+	  status = 'critical';
+	}
+	return status;
+ }
